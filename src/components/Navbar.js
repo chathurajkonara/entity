@@ -24,7 +24,8 @@ const NavBar = () => {
   }, [productsSelected, servicesSelected, contactSelected]);
 
   return (
-    <nav className=" text-sm sm:text-base bg-gray-50 mb-12 mt-2 bg-transparent sticky top-33 sm:top-29 md:top-21 z-10">
+    <nav className=" text-sm sm:text-base bg-gray-50 mb-12 mt-2 bg-transparent sticky top-0 sm:top-29 md:top-21 z-10">
+      {/* sticky top-33 sm:top-29 md:top-21 z-10 */}
       <ul className="flex justify-evenly space-x-2 bg-gray-200">
         <li
           className={`flex-auto text-center rounded-md bg-white hover:bg-gray-100 transition ease-out duration-700 text-gray-700 shadow-md inline-block p-2 ${

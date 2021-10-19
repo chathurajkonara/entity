@@ -10,7 +10,7 @@ const EntityHeader = () => {
   }, []);
 
   return (
-    <div className="grid sm:grid-cols-3 bg-gray-300 sticky top-0 z-10">
+    <div className="grid sm:grid-cols-3 bg-gray-300 sticky sm:top-0 z-10">
       <div className="flex justify-center justify-items-center my-2 sm:my-4">
         {entity.name && (
           <h1 className="text-2xl sm:text-4xl lg:text-6xl font-extrabold text-gray-600">
