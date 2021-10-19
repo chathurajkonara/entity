@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+//import { useHistory } from "react-router";
 
 const NavBar = () => {
   const [productsSelected, setProductsSelected] = useState(
@@ -12,8 +13,11 @@ const NavBar = () => {
     localStorage.getItem("contactSelected") === "true"
   );
 
+  // let history = useHistory();
+
   useEffect(() => {
     localStorage.setItem("productsSelected", true);
+    // history.push("/");
   }, []);
 
   //saving and retriving current state

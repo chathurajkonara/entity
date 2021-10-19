@@ -10,7 +10,7 @@ import HeadBanner from "./components/HeadBanner";
 
 function App() {
   return (
-    <Router>
+    <Router base="/">
       <div className="mx-auto px-4">
         <HeadBanner />
         <EntityHeader />
