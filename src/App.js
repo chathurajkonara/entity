@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import ProductsList from "./components/ProductsList";
@@ -15,9 +15,22 @@ function App() {
         <HeadBanner />
         <EntityHeader />
         <Navbar />
-        <Route exact path="/" component={ProductsList} />
-        <Route exact path="/create" component={ServicesList} />
-        <Route path="/user" component={ContatEntity} />
+        <div>
+          <Switch>
+            <Route exact path="/">
+              {" "}
+              <ProductsList />{" "}
+            </Route>
+            <Route exact path="/create">
+              {" "}
+              <ServicesList />{" "}
+            </Route>
+            <Route path="/user">
+              {" "}
+              <ContatEntity />{" "}
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   );
