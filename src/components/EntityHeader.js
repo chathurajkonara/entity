@@ -1,30 +1,13 @@
-import { useEffect, useState } from "react";
-//import headBanner from "../images/headBanner.jpg";
+import EntityName from "./EntityName";
 import StarRating from "./StarRating";
 
-const EntityHeader = () => {
-  const [entity, setEntity] = useState({});
-
-  useEffect(() => {
-    setEntity({ name: "Game Kade", ratings: 4.5, ratingsCount: 124 });
-  }, []);
-
+const EntityHeader = (props) => {
   return (
     <div className="grid sm:grid-cols-3 bg-gray-300 sticky sm:top-0 z-10">
-      <div className="flex justify-center justify-items-center my-2 sm:my-4">
-        {entity.name && (
-          <h1 className="text-2xl sm:text-4xl lg:text-6xl font-extrabold text-gray-600">
-            {entity.name}
-          </h1>
-        )}
+      <div className="hidden sm:block">
+        <EntityName name={props.name} />
       </div>
-
-      {entity.ratings && (
-        <StarRating
-          ratings={entity.ratings}
-          ratingsCount={entity.ratingsCount}
-        />
-      )}
+      <StarRating ratings={props.ratings} ratingsCount={props.ratingsCount} />
       <div className="flex justify-center justify-items-center my-2 sm:my-4">
         <a
           className=" text-xl sm:text-2xl hidden sm:block lg:text-4xl font-extrabold text-green-800 hover:text-blue-600"
