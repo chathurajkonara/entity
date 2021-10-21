@@ -24,9 +24,9 @@ const NavBar = () => {
   }, [productsSelected, servicesSelected, contactSelected]);
 
   return (
-    <nav className=" text-sm sm:text-base  mb-12 mt-2 bg-transparent sticky top-8 sm:top-22 md:top-21 z-10">
+    <nav className=" text-sm sm:text-base  mb-12 mt-2 bg-transparent sticky top-10 sm:top-22 z-10">
       {/* sticky top-33 sm:top-29 md:top-21 z-10 */}
-      <ul className="flex justify-evenly space-x-2 ">
+      <ul className="flex justify-evenly space-x-2 bg-gray-200 bg-opacity-80">
         <li
           className={`flex-auto text-center rounded-md bg-white hover:bg-gray-100 transition ease-out duration-700 text-gray-700 shadow-md inline-block p-2 ${
             productsSelected ? "bg-gray-200 font-bold" : "bg-current"

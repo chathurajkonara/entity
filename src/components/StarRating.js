@@ -38,7 +38,7 @@ export default function StarRating(props) {
 
   return (
     <div className="App">
-      <h1 className="font-bold text-sm text-red-900 sm:text-lg">
+      <h1 className="font-bold text-sm text-red-900 sm:text-lg sm:hidden lg:block">
         Would you like to rate us..
       </h1>
       <span className="group">

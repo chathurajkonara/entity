@@ -20,7 +20,7 @@ const RouteComponents = () => {
     <Router base="/">
       <div className="mx-auto px-4">
         <HeadBanner />
-        <div className="sticky top-0 sm:hidden z-20">
+        <div className="sticky top-0 sm:hidden z-20 bg-gray-200 bg-opacity-80">
           <EntityName name={entity.name} />
         </div>
         {entity.ratings && (

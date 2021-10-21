@@ -3,8 +3,8 @@ import StarRating from "./StarRating";
 
 const EntityHeader = (props) => {
   return (
-    <div className="grid sm:grid-cols-3 bg-gray-300 sticky sm:top-0 z-10">
-      <div className="hidden sm:block">
+    <div className="grid sm:grid-cols-3 bg-gray-300 sticky sm:top-0 z-10 ">
+      <div className="hidden sm:block ">
         <EntityName name={props.name} />
       </div>
       <StarRating ratings={props.ratings} ratingsCount={props.ratingsCount} />
