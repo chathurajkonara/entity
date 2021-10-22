@@ -1,27 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const NavBar = () => {
-  const [productsSelected, setProductsSelected] = useState(
-    localStorage.getItem("productsSelected") === "true"
-  );
-  const [servicesSelected, setServicesSelected] = useState(
-    localStorage.getItem("servicesSelected") === "true"
-  );
-  const [contactSelected, setContactSelected] = useState(
-    localStorage.getItem("contactSelected") === "true"
-  );
+  const [productsSelected, setProductsSelected] = useState(true);
+  const [servicesSelected, setServicesSelected] = useState(false);
+  const [contactSelected, setContactSelected] = useState(false);
+
+  let history = useHistory();
 
   useEffect(() => {
-    localStorage.setItem("productsSelected", true);
-  }, []);
-
-  //saving and retriving current state
-  useEffect(() => {
-    localStorage.setItem("productsSelected", productsSelected);
-    localStorage.setItem("servicesSelected", servicesSelected);
-    localStorage.setItem("contactSelected", contactSelected);
-  }, [productsSelected, servicesSelected, contactSelected]);
+    setProductsSelected(true);
+    setServicesSelected(false);
+    setContactSelected(false);
+    history.push("/");
+  }, [history]);
 
   return (
     <nav className=" text-sm sm:text-base  mb-12 mt-2 bg-transparent sticky top-10 sm:top-22 z-10">
